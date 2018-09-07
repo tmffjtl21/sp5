@@ -23,6 +23,6 @@ public class Generics8 {
         List<? extends A> la = listB;
         List<? super B> lb = listB; // super는 뒤에 나오는 타입이 wildcards 의 슈퍼타입이어야 된다.
 
-        la.add(null);   // 이것만 가능 
+        la.add(null);   // 이것만 가능
     }
 }

@@ -10,7 +10,7 @@ package com.tmffjtl21.sp5.five;
 
 import java.util.Arrays;
 
-// or옵션은 없음
+// 바운더리 타입에 or옵션은 없음
 // Array를 받고 기준값을 받아서 기준으로 준값보다 Array안에 몇개가 있는가 리턴하는 메소드
 // Generics 3에서 오류 수정
 public class Generics2 {
