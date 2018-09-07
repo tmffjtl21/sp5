@@ -8,17 +8,18 @@
 
 package com.tmffjtl21.sp5.five;
 
-import java.util.Arrays;
+import java.util.List;
 
-public class Generics3 {
-    // generics 메소드로 선언 리턴타입 앞에 선언
-    // bounded type : type parameter를 제한할 수 있다
-    static <T extends Comparable<T>> long countGreaterThan(T[] arr, T elem){
-        return Arrays.stream(arr).filter(s -> s.compareTo(elem) > 0).count();
-    }
+public class Generics6 {
+    // T로 쓰는거랑 ? 로 쓰는것의 차이점 ?
+    // 둘다 비슷한 개념이고
+    // ? 로 사용하는 거를 wildcards ( 뭐라도 들어가도 된다 )
+    // 이 오브젝트에 있는 기능만 갖다쓰겠다...
+    // 뭐가 오던지 상관없고 Generics 를 받는 List가 가지고 있는 메소드만 사용하겠다.
 
     public static void main(String[] args) {
-        String[] arr = new String[]{"a", "b", "c", "d" ,"e"};
-        System.out.println(countGreaterThan(arr, "c"));
+        List<?> list;       // List<? extends Object> list;
     }
+
+
 }

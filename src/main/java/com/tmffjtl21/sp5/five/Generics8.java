@@ -8,17 +8,21 @@
 
 package com.tmffjtl21.sp5.five;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Generics3 {
-    // generics 메소드로 선언 리턴타입 앞에 선언
-    // bounded type : type parameter를 제한할 수 있다
-    static <T extends Comparable<T>> long countGreaterThan(T[] arr, T elem){
-        return Arrays.stream(arr).filter(s -> s.compareTo(elem) > 0).count();
-    }
+public class Generics8 {
+    static class A {}
+    static class B extends A {}
+
+    static void print(List<? extends Object> list) {}
 
     public static void main(String[] args) {
-        String[] arr = new String[]{"a", "b", "c", "d" ,"e"};
-        System.out.println(countGreaterThan(arr, "c"));
+        List<B> listB = new ArrayList<B>();
+//        List<A> la = listB;
+        List<? extends A> la = listB;
+        List<? super B> lb = listB; // super는 뒤에 나오는 타입이 wildcards 의 슈퍼타입이어야 된다.
+
+        la.add(null);   // 이것만 가능 
     }
 }

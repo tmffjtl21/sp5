@@ -14,12 +14,12 @@ import java.util.Arrays;
 // Array를 받고 기준값을 받아서 기준으로 준값보다 Array안에 몇개가 있는가 리턴하는 메소드
 // Generics 3에서 오류 수정
 public class Generics2 {
-    static long countGreaterThan(Integer[] arr, Integer elem){
-        return Arrays.stream(arr).filter(s -> s > slem).count();
-    }
-
-    public static void main(String[] args) {
-        String[] arr = new String[]{"a", "b", "c", "d" ,"e"};
-        System.out.println(countGreaterThan(arr, "c"));
-    }
+//    static long countGreaterThan(Integer[] arr, Integer elem){
+//        return Arrays.stream(arr).filter(s -> s > slem).count();
+//    }
+//
+//    public static void main(String[] args) {
+//        String[] arr = new String[]{"a", "b", "c", "d" ,"e"};
+//        System.out.println(countGreaterThan(arr, "c"));
+//    }
 }
