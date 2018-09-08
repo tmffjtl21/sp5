@@ -30,7 +30,7 @@ public class Sp5Application {
 
     @RestController
     public static class MyController {
-        @RequestMapping("/hello")
+//        @RequestMapping("/hello")
         // HTTP Request : 3
         // HTTP Response : 3    status code, header, body
         @ResponseBody // 이게 자동으로 붙는다. HTTP Response Body -> return value
