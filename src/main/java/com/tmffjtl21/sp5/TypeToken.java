@@ -12,14 +12,14 @@ import java.util.List;
 
 public class TypeToken {
 
-    static class Generic<T> {
-        T value;
-        void set(T t){}
-        T get() { return null; }
-    }
+//    static class Generic<T> {
+////        T value;
+////        void set(T t){}
+////        T get() { return null; }
+//    }
 
     public static void main(String[] args) throws Exception{
-        Generic<String> s = new Generic<String>();
+//        Generic<String> s = new Generic<String>();
     }
 
     // 뭔가를 리턴하는 간단한 메소드
