@@ -1,18 +1,11 @@
 package com.tmffjtl21.sp5;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
-import reactor.core.scheduler.Scheduler;
 import reactor.core.scheduler.Schedulers;
 
 @SpringBootApplication
@@ -53,8 +46,8 @@ public class Sp5Application {
     }*/
 
     // 람다식으로 변경
-    @Bean
-    public ApplicationRunner run(){
-        return (args) -> System.out.println("run()...");
-    }
+//    @Bean
+//    public ApplicationRunner run(){
+//        return (args) -> System.out.println("run()...");
+//    }
 }
