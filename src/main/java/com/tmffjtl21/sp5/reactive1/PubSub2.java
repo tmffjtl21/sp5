@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.tmffjtl21.sp5.reactiveStreams1;
+package com.tmffjtl21.sp5.reactive1;
 
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;

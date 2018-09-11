@@ -2,7 +2,7 @@
  * Copyright (c) 2018.  by tmffjtl21
  */
 
-package com.tmffjtl21.sp5.reactiveStreams4;
+package com.tmffjtl21.sp5.reactive4;
 
 import io.netty.util.internal.logging.InternalLogger;
 import io.netty.util.internal.logging.Slf4JLoggerFactory;

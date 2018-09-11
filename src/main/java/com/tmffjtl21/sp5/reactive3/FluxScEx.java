@@ -2,7 +2,7 @@
  * Copyright (c) 2018.  by tmffjtl21
  */
 
-package com.tmffjtl21.sp5.reactiveStream3;
+package com.tmffjtl21.sp5.reactive3;
 
 import io.netty.util.internal.logging.InternalLogger;
 import io.netty.util.internal.logging.Slf4JLoggerFactory;
@@ -10,7 +10,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
 
 import java.time.Duration;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class FluxScEx {

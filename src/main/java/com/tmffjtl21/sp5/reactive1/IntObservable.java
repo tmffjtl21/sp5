@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.tmffjtl21.sp5.reactiveStreams1;
+package com.tmffjtl21.sp5.reactive1;
 // 1. Duality
 // 2. Observer 페턴 ( listener 나 이벤트 방식은 이 페턴을 따른다 )
 // 3. Reactive Streams - 표준( 자바를 다루는 회사들이 Reactive 표준을 정하고 가이드를 정하자고 해서 만듦 , Netflix 등등.. )
@@ -14,7 +14,6 @@ package com.tmffjtl21.sp5.reactiveStreams1;
 
 import java.util.Observable;
 import java.util.Observer;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
