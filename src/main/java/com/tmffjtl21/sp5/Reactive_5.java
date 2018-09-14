@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableAsync    // @Async 어노테이션을 쓸려면 이걸 적용해줘야함
-public class reactive5 {
+public class Reactive_5 {
 
     // 별개의 백단의 서비스를 호출하는 상황은 단순히 비동기 서블릿을 호출하는것만으로는 해결이 어렵다. -> 스프링으로 해결 방법을 설명
     // 요청이 많아져서 쓰레드풀이 풀로 차면 레이턴시가 떨어짐 ( 레이턴시 : 응답시간 )
