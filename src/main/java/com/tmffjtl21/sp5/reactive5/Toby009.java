@@ -29,19 +29,19 @@ import org.springframework.web.context.request.async.DeferredResult;
 @SpringBootApplication
 @EnableAsync
 public class Toby009 {
-    @RestController
+//    @RestController
     public static class MyController{
         //RestTemplate rt = new RestTemplate();
 //        AsyncRestTemplate rt = new AsyncRestTemplate();     // 비동기가 아니라 동기방식으로 다른 쓰레드를 추가로 만들어서 작업을 넘겨줌
         AsyncRestTemplate rt = new AsyncRestTemplate(new Netty4ClientHttpRequestFactory(new NioEventLoopGroup(1))); // 적절한 쓰레드수는 코어수*2
 
-        @Autowired
+//        @Autowired
         MyService myService;
 
         static final String URL1 = "http://localhost:8081/service?req={req}";
         static final String URL2 = "http://localhost:8081/service2?req={req}";
 
-        @GetMapping("/rest")
+//        @GetMapping("/rest")
 //        public  ListenableFuture<ResponseEntity<String>> rest(int idx) {      // 이렇게 쓰지않고 가공할 수 있다
         public  DeferredResult<String> rest(int idx) {
             // 블로킹 메소드임 쓰레드 한개로 테스트 함 server.tomcat.max-threads=1

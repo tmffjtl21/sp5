@@ -17,7 +17,7 @@ public class LoadTest {
 
     static AtomicInteger counter = new AtomicInteger(0);
     public static void main(String[] args) throws InterruptedException, BrokenBarrierException {
-        ExecutorService es = Executors.newFixedThreadPool(101);
+        ExecutorService es = Executors.newFixedThreadPool(100);
 
         RestTemplate rt = new RestTemplate();
         String url = "http://localhost:8080/rest?idx={idx}";
@@ -30,7 +30,7 @@ public class LoadTest {
                 int idx = counter.addAndGet(1);
                 logger.info("Thread {}", idx);
 
-//                barrier.await();                            // 쓰레드가 블로킹 됨 . 101이되면 같이 실행됨
+                barrier.await();                            // 쓰레드가 블로킹 됨 . 101이되면 같이 실행됨
 
                 StopWatch sw = new StopWatch();
                 sw.start();
@@ -43,9 +43,8 @@ public class LoadTest {
         StopWatch main = new StopWatch();
         main.start();
 
-//        barrier.await();
         es.shutdown();
-//        es.awaitTermination(10, TimeUnit.SECONDS); // 지정된 시간이 타임아웃 걸리기 전이라면 대기작업이 끝날때까지 기다리자
+        es.awaitTermination(5, TimeUnit.SECONDS); // 지정된 시간이 타임아웃 걸리기 전이라면 대기작업이 끝날때까지 기다리자
 
         main.stop();
         logger.info("Total : {}" , main.getTotalTimeSeconds());
